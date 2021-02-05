@@ -1,0 +1,12 @@
+ran: main.o init.o gen_Permutation.o
+	gcc -o ran main.o init.o gen_Permutation.o -L /home/pi/Documents/HW_Labs/Lab_4 -lautil
+	
+
+main.o: main.s
+	gcc -g -c main.s
+
+init.o: init.s
+	gcc -g -c init.s
+
+gen_Permutation.o: gen_Permutation.s
+	gcc -g -c gen_Permutation.s
